@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/pennsieve/template-serverless-service/service/logging"
+	"github.com/pennsieve/direct-download-metrics/service/logging"
 	"log/slog"
 )
 
@@ -13,8 +13,7 @@ func init() {
 	logger.Info("init()")
 }
 
-// TODO update Handler function name
-func TemplateServiceHandler(ctx context.Context, request events.APIGatewayV2HTTPRequest) (*events.APIGatewayV2HTTPResponse, error) {
+func DirectDownloadMetricsHandler(ctx context.Context, request events.APIGatewayV2HTTPRequest) (*events.APIGatewayV2HTTPResponse, error) {
 	logger = logger.With(slog.String("requestID", request.RequestContext.RequestID))
 
 	apiResponse, err := handleRequest()

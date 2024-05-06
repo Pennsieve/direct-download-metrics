@@ -1,6 +1,4 @@
-module github.com/pennsieve/template-serverless-service/service
-
-//TODO update module name
+module github.com/pennsieve/direct-download-metrics/service
 
 go 1.21
 
